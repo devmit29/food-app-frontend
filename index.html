@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JTGeats</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <main class="food-app">
+        <div class="cart-modal">
+          <div class="innercart">
+            <div class="cart">
+                <img src="./assets/cart-modal/cart-icon.svg" alt="">
+            </div>
+            <div class="cart-content">
+                <h2>Cart is Empty</h2>
+                <p>Add some items to the cart to checkout</p>
+            </div>
+            <div class="cart-close">
+                <button class="cart-close-btn" aria-label="Back to home">
+                    <div class="cart-close-content">
+                    <p>Back to Home</p>
+                    </div>
+                </button>
+            </div>
+          </div>
+        </div>
+        <div class="request-dish-modal">
+          <div class="request">
+            <div class="request-heading">
+              <h2>Request a Dish</h2>
+            </div>
+            <div class="request-form">
+              <form action="" class="request-form">
+                <div class="req-form-group">
+                  <label for="dish-name" >Name*</label>
+                  <input type="text" id="name" class="name" placeholder="Enter name of the dish" aria-label="Dish Name">
+                </div>
+                <div class="req-form-group">
+                  <label for="dish-image" >Upload an image</label>
+                  <input type="text" id="image-url"  placeholder="Paste a URL" aria-label="Paste a URL">
+                </div>
+              </form>
+            </div>
+            <div class="request-buttons-div">
+              <div class="request-buttons">
+                <div class="btn">
+                  <button class="req-cancel-btn" aria-label="Cancel">
+                    <div class="req-cancel-btn-content">
+                    <p>Cancel</p>
+                    </div>
+                </button>
+              </div>
+              <div class="btn">
+                <button class="req-submit-btn" aria-label="Submit">
+                    <div class="req-submit-btn-content">
+                    <p>Submit Request</p>
+                    </div>
+                </button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <section class="hero-section">
+        <header class="main-header">
+          <div class="header-container">
+            <div class="logo">
+              <p class="brand-name">JTGeats</p>
+            </div>
+              <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                  <li><a href="#home" class="nav-link">Home</a></li>
+                  <li><a href="#about" class="nav-link">About</a></li>
+                  <li><a href="#menu" class="nav-link">Menu</a></li>
+                  <li><a href="#blog" class="nav-link">Blog</a></li>
+                  <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+              </nav>
+              <div class="nav-actions">
+                <button class="search-btn" aria-label="View profile">
+                  <img src="/assets/headericons/search.svg" alt="" class="profile-icon">
+                </button>
+                <button class="cart-btn" aria-label="View cart">
+                  <img src="/assets/headericons/cart.svg" alt="" class="cart-icon">
+                  <img src="/assets/headericons/Ellipse 2.svg" alt="" class="cart-icon-filled">
+                </button>
+              </div>
+              <div class="hamburger-menu"">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+              </div>
+        </div>
+          <div class="mobile-menu" id="mobileMenu">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-actions">
+              <button class="search-btn" aria-label="View profile">
+                <img src="/assets/headericons/search.svg" alt="" class="profile-icon">
+              </button>
+              <button class="cart-btn" aria-label="View cart">
+                <img src="/assets/headericons/cart.svg" alt="" class="cart-icon">
+                <img src="/assets/headericons/Ellipse 2.svg" alt="" class="cart-icon-filled">
+              </button>
+        </div>
+          </div>
+        </header>
+        <div class="hero-content">
+          <div class="content-wrapper">
+            <div class="text-column">
+              <div class="hero-text">
+                <p class="hero-title">Authentic Home food in India</p>
+                <p class="hero-description">JTGeats is a courier service in which authentic home <br>
+                cook food is delivered to a customer.</p>
+              </div>
+              <form class="search-form" role="search">
+                <label for="food-search" class="visually-hidden">Search food you love</label>
+                <input type="search" id="food-search" class="search-input" placeholder="Search food you love" aria-label="Search food">
+                <button type="submit" class="search-button">
+                  <p>Search</p>
+                </button>
+              </form>
+            </div>
+            <div class="image-column">
+              <img src="/assets/hero-screen/cooking.svg" alt="Delicious home-cooked food presentation" class="hero-image">
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="kitchen-section" aria-label="Home Kitchen Menu">
+        <div class="kitchen-container">
+          <h2 class="kitchen-section-title">Home Kitchen</h2>
+          <div class="food-grid">
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img1.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                <span class="discount-badge">50% </span>
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img2.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹123</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                <span class="discount-badge">20% </span>
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img4.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img5.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                <span class="discount-badge">50% </span>
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">$19</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img6.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img7.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                <span class="discount-badge">20% </span>
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img8.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                <span class="discount-badge">50% </span>
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img9.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                <span class="discount-badge">50% </span>
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">$19</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img10.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img11.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                <span class="discount-badge">20% </span>
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="food-card">
+              <div class="card-image-wrapper">
+                <img src="/assets/fooditems/img12.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+              </div>
+              <div class="card-content">
+                <div class="card-text1">
+                  <p class="food-title">Home made pizza</p>
+                  <p class="food-price">₹190</p>
+                </div>
+                <div class="card-meta">
+                  <div class="rating">
+                    <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <div class="delivery-time">
+                    <div class="delivery-time2">
+                      <span class="time-range">50-79</span>
+                      <span class="time-unit">min</span>
+                    </div>
+                  </div>
+                  <button class="add-to-cart" aria-label="Add to cart">
+                    <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+    
+          <div class="trending-section" aria-label="Popular Items">
+            <div class="trending-title">
+              <p>Popular Items</p>
+            </div>
+            <div class="trending-container">  
+              <!-- <div class="left-arrow-column"> -->
+                <!-- <div class="left-arrow-container">
+                  <img src="/assets/trending-section/leftarrow.svg" alt="Previous" class="left-arrow">
+                  <img src="/assets/trending-section/leftarrowhover.svg" alt="Next" class="left-arrow-hover">
+                </div> -->
+              <!-- </div> -->
+              <div class="trending-content swiper/less">
+                <div class="card-wrapper">
+                  <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/popularItems/img4.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Home made pizza</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/popularItems/img1.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Tandoori Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/popularItems/img2.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="card-item swiper-slide">
+                      <article class="food-card">
+                        <div class="card-image-wrapper">
+                          <img src="/assets/fooditems/img3.png" alt="Homemade pizza with fresh ingredients" class="food-image">
+                          <span class="discount-badge">50% </span>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-text1">
+                            <p class="food-title">Chilli Chicken</p>
+                            <p class="food-price">₹190</p>
+                          </div>
+                          <div class="card-meta">
+                            <div class="rating">
+                              <img src="/assets/icons/rating.svg" alt="" class="rating-icon">
+                              <span class="rating-value">4.7</span>
+                            </div>
+                            <div class="delivery-time">
+                              <div class="delivery-time2">
+                                <span class="time-range">50-79</span>
+                                <span class="time-unit">min</span>
+                              </div>
+                            </div>
+                            <button class="add-to-cart" aria-label="Add to cart">
+                              <img src="/assets/icons/card.svg" alt="" class="cart-icon">
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                  <div class="left-arrow-container swiper-button-prev">
+                    <img src="/assets/trending-section/leftarrow.svg" alt="Previous" class="left-arrow">
+                    <img src="/assets/trending-section/leftarrowhover.svg" alt="Next" class="left-arrow-hover">
+                  </div>
+                  <div class="right-arrow-container swiper-button-next">
+                    <img src="/assets/trending-section/rightarrow.svg" alt="Next" class="right-arrow">
+                    <img src="/assets/trending-section/rightarrowhover.svg" alt="Next" class="right-arrow-hover">
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- <div class="right-arrow-column"> -->
+            <!-- </div> -->
+            <div class="request-dish">
+              <button class="request-dish-btn" aria-label="Request a new dish">
+              <div class="request-dish-content">
+                <p>Request a Dish</p>
+              </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="service-section" aria-label="Service Information">
+        <div class="service-container">
+          <div class="service-content">
+            <div class="service-row">
+              <div class="service-title"><h2>We are providing best<br>home cooked food delivery service.</h2></div>
+              <div class="service-description"><p>Away from home and craving the tasty homemade recipes?<br>Choose from a selection of our delicious home cooked dishes</p></div>
+            </div>
+          </div>
+          <div class="service-video">
+            <div class="video-wrapper">
+              <video id="video" height="442px" width="887px" disablePictureInPicture>
+                <source src="/assets/service-section/service-video.mp4" type="video/mp4">
+              </video>
+              <button class="play-pause" id="play-pause">
+                <img src="/assets/service-section/Arrow.svg" alt="Play video" class="play-icon">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="background">
+          <div class="background-color"></div>
+        </div>
+      </section>
+    
+      <section class="contact-section" aria-label="Contact Form">
+        <div class="contact-container">
+          <div class="contact-text-column">
+            <div class="form-wrapper">
+              <div class="form-text">
+                <div class="form-heading"><p>Do you have a question<br>or want to become a seller?</p></div>
+                <div class="form-line"><p>Fill this form and our manager will contact you next 48 hours.</p></div>
+              </div>
+              <form class="contact-form2">
+                <div class="contact-form">
+                  <div class="form-group">
+                    <label for="name" class="visually-hidden">Your Name</label>
+                    <input type="text" class="form-input" placeholder="Your Name" required/>
+                    
+                    <label for="email" class="visually-hidden">Your e-mail</label>
+                    <input type="email" class="form-input" placeholder="Your e-mail" required/>
+                  </div>
+                  
+                  <div class="form-message">
+                    <label for="message" class="visually-hidden">Your message</label>
+                    <textarea id="message" class="form-textarea" placeholder="Your message" required></textarea>
+                  </div>
+                  <div class="form-btn">
+                    <button type="submit" class="submit-btn"><p>Submit</p></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="delivery-boy"><img src="/assets/service-section/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration 2.svg" alt="Contact illustration" class="contact-image">
+          </div>
+        </div>
+      </section>
+    
+      <footer class="main-footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-brand"><p>JTGeats</p></div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="footer-actions">
+              <button class="profile-btn" aria-label="View profile">
+                <img src="/assets/icons/fb.svg" alt="" class="profile-icon">
+              </button>
+              <button class="cart-btn" aria-label="View cart">
+                <img src="/assets/icons/insta.svg" alt="" class="cart-icon">
+              </button>
+            </div>
+          </div>
+          <div class="footer-divider">
+            <div class="divider-line"></div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
